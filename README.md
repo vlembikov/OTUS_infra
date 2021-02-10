@@ -1,8 +1,10 @@
 # OTUS_infra
 Конфигурация bastionhost сети:
 
-bastionhost = 34.78.108.124
-someinternalhost = 10.132.0.13
+bastion_IP = 34.78.108.124
+someinternalhost_IP = 10.132.0.13
+
+webUI for pritunl: https://ovpn.skdata.ru/
 
 Для подключения к someinternalhost через bastionhost можем воспользоваться командой:
 ````
