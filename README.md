@@ -25,3 +25,6 @@ ProxyJump bastionhost
 ForwardAgent yes
 IdentityFile ~/.ssh/ll_rsa
 ````
+
+testapp_IP = 35.233.51.244
+testapp_port = 9292
