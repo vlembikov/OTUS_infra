@@ -1,0 +1,5 @@
+{
+	"project_id": "polygon-xxxxx",
+        "machine_type": "xx-micro",
+        "image_family": "reddit-base"
+}
