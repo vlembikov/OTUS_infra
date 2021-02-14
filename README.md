@@ -82,3 +82,42 @@ gcloud compute firewall-rules delete default-puma-server
 ## Как проверить работоспособность:
  - Перейти по ссылке http://35.233.51.244:9292
 </p></details>
+
+<details><summary>Выполнено ДЗ № 7 > packer-base</summary><p>
+
+ - [ ] Основное ДЗ
+ - [ ] Задание со *
+
+## В процессе сделано:
+ - Реализован вынос переменных в файл variables.json.
+ - Добавить исключение в файл .gitignore.
+ - Реализовать заглушку variables.json.example.
+ - Разобраться с подходом Immutable infrastructure.
+ - Сделать скрипт запуска create-reddit-vm.sh для запуска готовой машины.
+
+## Как запустить проект:
+````
+gcloud compute instances create reddit-app\
+ --tags puma-server \
+ --image-family reddit-full \
+ --preemptible \
+ --machine-type=e2-micro
+````
+````
+gcloud compute firewall-rules create default-puma-server\
+ --direction=INGRESS \
+ --priority=1000 \
+ --network=default \
+ --action=ALLOW \
+ --rules=tcp:9292 \
+ --source-ranges=0.0.0.0/0 \
+ --target-tags=puma-server
+````
+
+## Как проверить работоспособность:
+ - Например, перейти по ссылке http://34.77.29.108:9292
+
+## PR checklist
+ - [ ] Выставил label с номером домашнего задания
+ - [ ] Выставил label с темой домашнего задания
+ </p></details>
