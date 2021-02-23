@@ -1,35 +1,35 @@
 terraform {
   # Версия terraform
-  required_version = "0.11.14"
+  required_version = "0.12.30"
 }
 
 provider "google" {
   # Версия провайдера
   # ID проекта
-  project = "${var.project}"
+  project = var.project
 
-  region = "${var.region}"
+  region = var.region
 }
 
-resource "google_compute_project_metadata" "default" {
-  metadata {
-    ssh-keys = <<EOF
-		appuser1:${file(var.public_key_path)}
-		appuser2:${file(var.public_key_path)}
-	EOF
-  }
-}
+#resource "google_compute_project_metadata" "default" {
+#  metadata {
+#    ssh-keys = <<EOF
+#		appuser1:${file(var.public_key_path)}
+#		appuser2:${file(var.public_key_path)}
+#	EOF
+#  }
+#}
 
 resource "google_compute_instance" "app" {
   name         = "reddit-app"
   machine_type = "e2-micro"
-  zone         = "${var.zone}"
+  zone         = var.zone
   tags         = ["reddit-app"]
 
   # определение загрузочного диска
   boot_disk {
     initialize_params {
-      image = "${var.disk_image}"
+      image = var.disk_image
     }
   }
 
@@ -51,7 +51,8 @@ resource "google_compute_instance" "app" {
     type        = "ssh"
     user        = "vlembikov"
     agent       = false
-    private_key = "${file(var.private_key_path)}"
+    private_key = file(var.private_key_path)
+    host        = google_compute_instance.app.network_interface.0.access_config.0.nat_ip
   }
 
   provisioner "file" {
