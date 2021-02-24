@@ -32,3 +32,4 @@ variable disk_image {
   description = "Disk image"
   default     = "reddit-base"
 }
+
