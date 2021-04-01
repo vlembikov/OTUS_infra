@@ -1,5 +1,5 @@
 {
 	"project_id": "winged-polygon-303720",
         "machine_type": "e2-micro",
-        "image_family": "reddit-full"
+        "image_family": "reddit-db-full"
 }
