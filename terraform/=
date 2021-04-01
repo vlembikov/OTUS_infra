@@ -1,0 +1,215 @@
+Script started on 2021-03-30 22:59:37+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="84" LINES="24"]
+  }
+}
+
+resource "google_compute_firewall" "firewall_puma" {
+  name = "allow-puma-default"
+
+  # Название сети, в которой действует правило
+  network = "default"
+
+  # Какой доступ разрешить
+  allow {
+    protocol = "tcp"
+    ports    = ["9292"]
+  }
+
+  # Каким адресам разрешаем доступ
+  source_ranges = ["0.0.0.0/0"]
+
+  # Правило применимо для инстансов с перечисленными тэгами
+  target_tags = ["reddit-app"]
+}
+
+resource "google_compute_firewall" "firewall_ssh" {
+  name = "default-allow-ssh"
+  network = "default"
+  allow {
+    protocol = "tcp"
+    ports = ["22"]
+  }
+  source_ranges = ["0.0.0.0/0"]
+}
+
+resource "google_compute_address" "app_ip" {
+  name = "reddit-app-ip"
+}]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   }
+bash: синтаксическая ошибка рядом с неожиданным маркером «}»
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }
+bash: синтаксическая ошибка рядом с неожиданным маркером «}»
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ 
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ resource "google_compute_firewall" "firewall_puma" {
+
+Команда «resource» не найдена. Возможно, вы имели в виду:
+
+  command 'gresource' from deb libglib2.0-bin (2.64.6-1~ubuntu20.04.3)
+
+Try: sudo apt install <deb name>
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   name = "allow-puma-default"
+
+Команда «name» не найдена. Возможно, вы имели в виду:
+
+  command 'mame' from snap mame (mame0229)
+  command 'nam' from deb nam (1.15-5build1)
+  command 'uname' from deb coreutils (8.30-3ubuntu2)
+  command 'lame' from deb lame (3.100-3)
+  command 'named' from deb bind9 (1:9.16.1-0ubuntu2.7)
+  command 'mame' from deb mame (0.220+dfsg.1-1)
+  command 'namei' from deb util-linux (2.34-0.1ubuntu9.1)
+  command 'nvme' from deb nvme-cli (1.9-1ubuntu0.1)
+  command 'nama' from deb nama (1.216-1)
+
+See 'snap info <snapname>' for additional versions.
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ 
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   # Название сети, в которой действует правило
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   network = "default"
+
+Команда «network» не найдена. Возможно, вы имели в виду:
+
+  command 'networks' from deb golang-github-vmware-govmomi-dev (0.15.0-1)
+
+Try: sudo apt install <deb name>
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ 
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   # Какой доступ разрешить
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   allow {
+allow: команда не найдена
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$     protocol = "tcp"
+protocol: команда не найдена
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$     ports    = ["9292"]
+
+Команда «ports» не найдена. Возможно, вы имели в виду:
+
+  command 'po2ts' from deb translate-toolkit (2.5.0-1)
+
+Try: sudo apt install <deb name>
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   }
+bash: синтаксическая ошибка рядом с неожиданным маркером «}»
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ 
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   # Каким адресам разрешаем доступ
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   source_ranges = ["0.0.0.0/0"]
+source_ranges: команда не найдена
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ 
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   # Правило применимо для инстансов с перечисленными тэгами
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   target_tags = ["reddit-app"]
+target_tags: команда не найдена
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }
+bash: синтаксическая ошибка рядом с неожиданным маркером «}»
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ 
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ resource "google_compute_firewall" "firewall_ssh" {
+
+Команда «resource» не найдена. Возможно, вы имели в виду:
+
+  command 'gresource' from deb libglib2.0-bin (2.64.6-1~ubuntu20.04.3)
+
+Try: sudo apt install <deb name>
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   name = "default-allow-ssh"
+
+Команда «name» не найдена. Возможно, вы имели в виду:
+
+  command 'mame' from snap mame (mame0229)
+  command 'mame' from deb mame (0.220+dfsg.1-1)
+  command 'namei' from deb util-linux (2.34-0.1ubuntu9.1)
+  command 'uname' from deb coreutils (8.30-3ubuntu2)
+  command 'lame' from deb lame (3.100-3)
+  command 'nama' from deb nama (1.216-1)
+  command 'nvme' from deb nvme-cli (1.9-1ubuntu0.1)
+  command 'named' from deb bind9 (1:9.16.1-0ubuntu2.7)
+  command 'nam' from deb nam (1.15-5build1)
+
+See 'snap info <snapname>' for additional versions.
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   network = "default"
+
+Команда «network» не найдена. Возможно, вы имели в виду:
+
+  command 'networks' from deb golang-github-vmware-govmomi-dev (0.15.0-1)
+
+Try: sudo apt install <deb name>
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   allow {
+allow: команда не найдена
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$     protocol = "tcp"
+protocol: команда не найдена
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$     ports = ["22"]
+
+Команда «ports» не найдена. Возможно, вы имели в виду:
+
+  command 'po2ts' from deb translate-toolkit (2.5.0-1)
+
+Try: sudo apt install <deb name>
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   }
+bash: синтаксическая ошибка рядом с неожиданным маркером «}»
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   source_ranges = ["0.0.0.0/0"]
+source_ranges: команда не найдена
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }
+bash: синтаксическая ошибка рядом с неожиданным маркером «}»
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ 
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ resource "google_compute_address" "app_ip" {
+
+Команда «resource» не найдена. Возможно, вы имели в виду:
+
+  command 'gresource' from deb libglib2.0-bin (2.64.6-1~ubuntu20.04.3)
+
+Try: sudo apt install <deb name>
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$   name = "reddit-app-ip"
+
+Команда «name» не найдена. Возможно, вы имели в виду:
+
+  command 'mame' from snap mame (mame0229)
+  command 'uname' from deb coreutils (8.30-3ubuntu2)
+  command 'named' from deb bind9 (1:9.16.1-0ubuntu2.7)
+  command 'mame' from deb mame (0.220+dfsg.1-1)
+  command 'nama' from deb nama (1.216-1)
+  command 'namei' from deb util-linux (2.34-0.1ubuntu9.1)
+  command 'lame' from deb lame (3.100-3)
+  command 'nvme' from deb nvme-cli (1.9-1ubuntu0.1)
+  command 'nam' from deb nam (1.15-5build1)
+
+See 'snap info <snapname>' for additional versions.
+
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }resource "google_compute_address" "app_ip" {[A]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ resource "google_compute_address" "app_ip" {[A]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cresource "google_compute_firewall" "firewall_ssh" {[A]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cresource "google_compute_firewall" "firewall_ssh" {[A]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cresource "google_compute_address" "app_ip" {[A]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cresource "google_compute_address" "app_ip" {[A]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cresource "google_compute_firewall" "firewall_ssh" {[A]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cresource "google_compute_firewall" "firewall_puma" {[A]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ }[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cterraform destroy -forcey[K[5Papplydestroy -y[Kforce
+[0m[1mgoogle_compute_firewall.firewall_puma: Destroying... [id=projects/winged-polygon-303720/global/firewalls/allow-puma-default][0m[0m
+[0m[1mgoogle_compute_instance.app: Destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-app][0m[0m
+[0m[1mgoogle_compute_firewall.firewall_mongo: Destroying... [id=projects/winged-polygon-303720/global/firewalls/allow-mongo-default][0m[0m
+[0m[1mgoogle_compute_firewall.firewall_ssh: Destroying... [id=projects/winged-polygon-303720/global/firewalls/default-allow-ssh][0m[0m
+[0m[1mgoogle_compute_instance.db: Destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-db][0m[0m
+[0m[1mgoogle_compute_firewall.firewall_puma: Still destroying... [id=projects/winged-polygon-303720/global/firewalls/allow-puma-default, 10s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.app: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-app, 10s elapsed][0m[0m
+[0m[1mgoogle_compute_firewall.firewall_mongo: Still destroying... [id=projects/winged-polygon-303720/global/firewalls/allow-mongo-default, 10s elapsed][0m[0m
+[0m[1mgoogle_compute_firewall.firewall_ssh: Still destroying... [id=projects/winged-polygon-303720/global/firewalls/default-allow-ssh, 10s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.db: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-db, 10s elapsed][0m[0m
+[0m[1mgoogle_compute_firewall.firewall_ssh: Destruction complete after 12s[0m[0m
+[0m[1mgoogle_compute_firewall.firewall_mongo: Destruction complete after 13s[0m[0m
+[0m[1mgoogle_compute_firewall.firewall_puma: Destruction complete after 13s[0m[0m
+[0m[1mgoogle_compute_instance.app: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-app, 20s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.db: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-db, 20s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.app: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-app, 30s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.db: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-db, 30s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.app: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-app, 40s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.db: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-db, 40s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.app: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-app, 50s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.db: Still destroying... [id=projects/winged-polygon-303720/zones/europe-west1-b/instances/reddit-db, 50s elapsed][0m[0m
+[0m[1mgoogle_compute_instance.db: Destruction complete after 55s[0m[0m
+[0m[1mgoogle_compute_instance.app: Destruction complete after 55s[0m[0m
+[0m[1mgoogle_compute_address.app_ip: Destroying... [id=projects/winged-polygon-303720/regions/europe-west1/addresses/reddit-app-ip][0m[0m
+[0m[1mgoogle_compute_address.app_ip: Still destroying... [id=projects/winged-polygon-303720/regions/europe-west1/addresses/reddit-app-ip, 10s elapsed][0m[0m
+[0m[1mgoogle_compute_address.app_ip: Destruction complete after 12s[0m[0m
+[0m[1m[32m
+Destroy complete! Resources: 6 destroyed.[0m
+]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terraform[00m$ [K]0;vlembikov@Aspire: ~/OTUS_infra/terraform[01;32mvlembikov@Aspire[00m:[01;34m~/OTUS_infra/terr

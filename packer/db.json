@@ -14,7 +14,7 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-full-{{timestamp}}",
+            "image_name": "reddit-db-full-{{timestamp}}",
             "image_family": "{{user `image_family`}}",
             "source_image_family": "ubuntu-1604-lts",
             "zone": "{{user `zone`}}",
@@ -27,25 +27,10 @@
         }
     ],
     "provisioners": [
-	{
-	    "type": "file",
-	    "source": "files/puma-server.service",
-	    "destination": "/tmp/puma-server.service"
-	},
-    {
-        "type": "shell",
-        "script": "scripts/install_ruby.sh",
-        "execute_command": "sudo {{.Path}}"
-    },
     {
         "type": "shell",
         "script": "scripts/install_mongodb.sh",
         "execute_command": "sudo {{.Path}}"
-    },
-	{
-	    "type": "shell",
-	    "script": "scripts/deploy.sh",
-	    "execute_command": "sudo {{.Path}}"
-	}
+    }
     ]
 }
