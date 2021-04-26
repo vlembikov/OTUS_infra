@@ -28,19 +28,8 @@
     ],
     "provisioners": [
 	{
-	    "type": "file",
-	    "source": "files/puma-server.service",
-	    "destination": "/tmp/puma-server.service"
-	},
-    {
-        "type": "shell",
-        "script": "scripts/install_ruby.sh",
-        "execute_command": "sudo {{.Path}}"
-    },
-	{
-	    "type": "shell",
-	    "script": "scripts/deploy.sh",
-	    "execute_command": "sudo {{.Path}}"
+        "type": "ansible",
+        "playbook_file": "ansible/packer_app.yml"
 	}
     ]
 }
